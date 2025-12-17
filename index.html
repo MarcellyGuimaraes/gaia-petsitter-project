@@ -3,17 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary Meta Tags -->
     <title>Gaia Pet Sitter - Pet Sitter em Feira de Santana</title>
+    <meta name="title" content="Gaia Pet Sitter - Pet Sitter em Feira de Santana">
+    <meta name="description" content="Serviço profissional de pet sitter em Feira de Santana. Visitas domiciliares, cuidados personalizados e relatórios detalhados. Agende sua visita via WhatsApp!">
+    <meta name="keywords" content="pet sitter, feira de santana, cuidados com pets, visita domiciliar, pet care, veterinária">
+    <meta name="author" content="Gaia Pet Sitter">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Portuguese">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gaiapetsitter.com.br/">
+    <meta property="og:title" content="Gaia Pet Sitter - Pet Sitter em Feira de Santana">
+    <meta property="og:description" content="Serviço profissional de pet sitter em Feira de Santana. Visitas domiciliares, cuidados personalizados e relatórios detalhados.">
+    <meta property="og:image" content="./assets/imagens/imagem-banner.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gaiapetsitter.com.br/">
+    <meta property="twitter:title" content="Gaia Pet Sitter - Pet Sitter em Feira de Santana">
+    <meta property="twitter:description" content="Serviço profissional de pet sitter em Feira de Santana. Visitas domiciliares, cuidados personalizados e relatórios detalhados.">
+    <meta property="twitter:image" content="./assets/imagens/imagem-banner.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    
+    <!-- Preconnect para melhor performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
           integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
           crossorigin="anonymous" 
           referrerpolicy="no-referrer" />
-    <!-- Carrega o Tailwind CSS para estilização e responsividade -->
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body class="antialiased">
+    <!-- Skip to main content (Acessibilidade) -->
+    <a href="#main-content" class="skip-to-main">Pular para o conteúdo principal</a>
 
     <!-- Cabeçalho e Navegação -->
     <header class="sticky top-0 bg-white shadow-md z-10">
@@ -33,12 +71,18 @@
                 Agendar
             </a>
             <!-- Botão Hamburguer para Mobile -->
-            <button id="menu-button" class="md:hidden text-gray-600 hover:text-primary focus:outline-none">
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <button id="menu-button" 
+                    class="md:hidden text-gray-600 hover:text-primary focus:outline-none"
+                    aria-label="Abrir menu de navegação"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
             </button>
         </div>
         <!-- Menu Mobile -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-4 space-y-1">
+        <nav id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-4 space-y-1" aria-label="Menu de navegação mobile">
             <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Início</a>
             <a href="#sobre" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Sobre Mim</a>
             <a href="#comofunciona" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Como Funciona</a>
@@ -49,7 +93,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         
         <!-- 1. Página Inicial (Home) - Herói -->
         <section id="home" class="bg-gray-50 pt-16 pb-24 sm:pt-24 sm:pb-32">
@@ -73,11 +117,15 @@
                         </div>
                     </div>
                     
-                    <!-- Lado Direito (Imagem - Placeholder)  -->
-                    <div class="mt-10 lg:mt-0 lg:col-span-6" style="text-align: -webkit-center;">
-                        <!-- Imagem de Placeholder para demonstrar a seção -->
+                    <!-- Lado Direito (Imagem)  -->
+                    <div class="mt-10 lg:mt-0 lg:col-span-6 flex justify-center">
                         <div class="w-[70%] h-full bg-gray-200 rounded-2xl flex items-center justify-center overflow-hidden shadow-2xl">
-                             <img src="./assets/imagens/imagem-banner.jpg" alt="Gaia e informacoes sobre ela" class="object-cover w-full h-full">
+                             <img src="./assets/imagens/imagem-banner.jpg" 
+                                  alt="Gaia Pet Sitter - Profissional de cuidados com animais em Feira de Santana" 
+                                  class="object-cover w-full h-full"
+                                  loading="eager"
+                                  width="600"
+                                  height="400">
                         </div>
                     </div>
 
@@ -335,22 +383,38 @@
                 </div>
                 
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 rounded-lg">
-                    <!-- Placeholder 1: Cão no passeio -->
-                    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                        <img class="w-full h-48 object-cover object-center" src="./assets/imagens/carousel-1.jpg" alt="Cachorro feliz durante o passeio">
-                    </div>
-                    <!-- Placeholder 2: Gato em casa -->
-                    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                        <img class="w-full h-48 object-cover object-center" src="./assets/imagens/carousel-2.jpg" alt="Gato sendo mimado no sofá">
-                    </div>
-                    <!-- Placeholder 3: Hora da refeição -->
-                    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                        <img class="w-full h-48 object-cover object-center" src="./assets/imagens/carousel-3.jpg" alt="Pet Sitter alimentando o animal">
-                    </div>
-                    <!-- Placeholder 4: Relatório diário (Close-up) -->
-                    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                        <img class="w-full h-48 object-cover object-center" src="./assets/imagens/carousel-4.jpg" alt="Abraço carinhoso entre pet e sitter">
-                    </div>
+                    <article class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <img class="w-full h-48 object-cover object-center" 
+                             src="./assets/imagens/carousel-1.jpg" 
+                             alt="Cachorro feliz durante o passeio com a Gaia Pet Sitter"
+                             loading="lazy"
+                             width="300"
+                             height="192">
+                    </article>
+                    <article class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <img class="w-full h-48 object-cover object-center" 
+                             src="./assets/imagens/carousel-2.jpg" 
+                             alt="Gato sendo mimado no sofá durante visita domiciliar"
+                             loading="lazy"
+                             width="300"
+                             height="192">
+                    </article>
+                    <article class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <img class="w-full h-48 object-cover object-center" 
+                             src="./assets/imagens/carousel-3.jpg" 
+                             alt="Pet Sitter alimentando o animal com cuidado e carinho"
+                             loading="lazy"
+                             width="300"
+                             height="192">
+                    </article>
+                    <article class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <img class="w-full h-48 object-cover object-center" 
+                             src="./assets/imagens/carousel-4.jpg" 
+                             alt="Abraço carinhoso entre pet e sitter demonstrando confiança"
+                             loading="lazy"
+                             width="300"
+                             height="192">
+                    </article>
                 </div>
             </div>
         </section>
@@ -555,6 +619,6 @@
     </footer>
 
 
-    <script src="scripts.js"></script>
+    <script src="./assets/scripts.js" defer></script>
 </body>
 </html>
