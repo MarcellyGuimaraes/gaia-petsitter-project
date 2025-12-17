@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaia Pet Sitter - Pet Sitter em Feira de Santana</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+          crossorigin="anonymous" 
+          referrerpolicy="no-referrer" />
+    <!-- Carrega o Tailwind CSS para estilização e responsividade -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased">
+
+    <!-- Cabeçalho e Navegação -->
+    <header class="sticky top-0 bg-white shadow-md z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <div class="text-2xl font-bold text-primary">
+                Gaia Pet Sitter
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-600 hover:text-primary transition duration-150">Início</a>
+                <a href="#sobre" class="text-gray-600 hover:text-primary transition duration-150">Sobre Mim</a>
+                <a href="#comofunciona" class="text-gray-600 hover:text-primary transition duration-150">Como Funciona</a>
+                <a href="#servicos" class="text-gray-600 hover:text-primary transition duration-150">Serviços</a>
+                <a href="#galeria" class="text-gray-600 hover:text-primary transition duration-150">Galeria</a>
+                <a href="#contato" class="text-gray-600 hover:text-primary transition duration-150">Contato</a>
+            </nav>
+            <a href="#agendamento" class="hidden md:inline-block bg-primary text-white px-4 py-2 rounded-lg font-semibold hover:bg-primary-dark transition duration-150 shadow-md">
+                Agendar
+            </a>
+            <!-- Botão Hamburguer para Mobile -->
+            <button id="menu-button" class="md:hidden text-gray-600 hover:text-primary focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-4 space-y-1">
+            <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Início</a>
+            <a href="#sobre" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Sobre Mim</a>
+            <a href="#comofunciona" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Como Funciona</a>
+            <a href="#servicos" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Serviços</a>
+            <a href="#galeria" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Galeria</a>
+            <a href="#contato" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Contato</a>
+            <a href="#agendamento" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-primary text-center">Agendar Agora</a>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- 1. Página Inicial (Home) - Herói -->
+        <section id="home" class="bg-gray-50 pt-16 pb-24 sm:pt-24 sm:pb-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
+                    
+                    <!-- Lado Esquerdo (Texto e CTA) -->
+                    <div class="lg:col-span-6">
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight">
+                            Tranquilidade em Sua Viagem: <span class="text-primary">Visitas Domiciliares</span> Profissionais
+                        </h1>
+                        <p class="mt-4 text-xl text-gray-500 max-w-lg">
+                            Seu pet fica no conforto do lar enquanto você viaja! Garanto visitas programadas, atenção exclusiva e relatórios detalhados para sua total tranquilidade.
+                        </p>
+                        <!-- CTA principal: Agende via WhatsApp -->
+                        <div class="mt-10 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                            <a href="#agendamento" class="w-full sm:w-auto bg-primary text-white px-8 py-4 rounded-xl text-lg font-bold shadow-lg hover:bg-primary-dark transition duration-300 transform hover:scale-105 flex items-center justify-center">
+                                <i class="fab fa-whatsapp text-2xl mr-3"></i>
+                                Agende sua Visita via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Lado Direito (Imagem - Placeholder)  -->
+                    <div class="mt-10 lg:mt-0 lg:col-span-6" style="text-align: -webkit-center;">
+                        <!-- Imagem de Placeholder para demonstrar a seção -->
+                        <div class="w-[70%] h-full bg-gray-200 rounded-2xl flex items-center justify-center overflow-hidden shadow-2xl">
+                             <img src="./assets/imagens/imagem-banner.jpg" alt="Gaia e informacoes sobre ela" class="object-cover w-full h-full">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Sobre a Gaia -->
+        <section id="sobre" class="py-24 bg-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-4">
+                    Conheça a Gaia
+                </h2>
+                <div class="max-w-3xl mx-auto">
+                    <!-- Bio Pessoal -->
+                    <p class="text-lg text-gray-600 mt-6 leading-relaxed">
+                        Meu nome é <strong class="text-primary">Gaia</strong> e desde a infância sou apaixonada por animais, sejam eles grandes, pequenos, domésticos ou selvagens. Qualquer função que envolva animais, eu já fico feliz em participar! Por este motivo, optei pelo serviço de pet sitter enquanto estou em formação, trabalhando desde <strong>agosto de 2021</strong> em Feira de Santana.
+                    </p>
+                    <p class="text-lg text-gray-600 mt-4 leading-relaxed">
+                        Entendo perfeitamente a preocupação em deixar seu companheiro com alguém de confiança. Por isso, ofereço não apenas um serviço, mas sim uma extensão do seu carinho e atenção. Cada atendimento é feito com responsabilidade, carinho e respeito ao espaço do seu pet, garantindo que a rotina seja mantida com segurança e conforto enquanto você estiver ausente. Você receberá relatórios detalhados com fotos e vídeos de todas as visitas!
+                    </p>
+                    <p class="text-lg text-gray-600 mt-4 leading-relaxed">
+                        Minha missão é cuidar do seu pet com todo o conhecimento técnico e amor que a profissão exige, sempre priorizando o bem-estar e a felicidade do seu melhor amigo.
+                    </p>
+                </div>
+                <!-- Qualificações -->
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-sm">
+                        <div class="text-primary text-3xl mb-3">🎓</div>
+                        <h3 class="font-semibold text-lg mb-1">Formação Técnica</h3>
+                        <p class="text-sm text-gray-500">Auxiliar de Veterinário pela TECTRON</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-sm">
+                        <div class="text-primary text-3xl mb-3">🏥</div>
+                        <h3 class="font-semibold text-lg mb-1">Graduação</h3>
+                        <p class="text-sm text-gray-500">Medicina Veterinária - Faculdade Anísio Teixeira (8º semestre)</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-sm">
+                        <div class="text-primary text-3xl mb-3">🏡</div>
+                        <h3 class="font-semibold text-lg mb-1">Experiência</h3>
+                        <p class="text-sm text-gray-500">Pet Sitter desde agosto de 2021</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-sm">
+                        <div class="text-primary text-3xl mb-3">🔬</div>
+                        <h3 class="font-semibold text-lg mb-1">Futura Especialização</h3>
+                        <p class="text-sm text-gray-500">Interesse em Clínica de Felinos ou Dermatologia</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2.5. Como Funciona -->
+        <section id="comofunciona" class="py-24 bg-gray-50">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-4">
+                        Como Funciona?
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        Visitas de 30 a 60 minutos, dependendo da necessidade. Cada atendimento é feito com carinho, responsabilidade e respeito ao espaço do pet.
+                    </p>
+                </div>
+
+                <!-- Visita de Apresentação -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-primary mb-8">
+                    <div class="flex items-start">
+                        <div class="text-4xl mr-4">👋</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary mb-3">Visita de Apresentação Gratuita</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Antes das visitas oficiais, agendamos uma visita de apresentação gratuita, para que você me conheça pessoalmente e eu possa conhecer seus pets, entender a rotina com calma e segurança. Esse primeiro encontro é essencial para criar vínculo e garantir um atendimento personalizado.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- O que é feito nas visitas -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">O que é feito nas visitas?</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-start">
+                            <svg class="h-6 w-6 mr-3 text-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span class="text-gray-700">Higienização de comedouros e bebedouros</span>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="h-6 w-6 mr-3 text-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span class="text-gray-700">Alimentação</span>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="h-6 w-6 mr-3 text-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span class="text-gray-700">Reposição de água</span>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="h-6 w-6 mr-3 text-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span class="text-gray-700">Limpeza de caixas de areia, troca de tapetes higiênicos ou limpeza de local sanitário (quintal ou corredor)</span>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="h-6 w-6 mr-3 text-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span class="text-gray-700">Passeios (caso faça)</span>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="h-6 w-6 mr-3 text-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span class="text-gray-700">Higiene básica: escovação de pelos, corte de unhas, tosa higiênica (caso o animal permita)</span>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="h-6 w-6 mr-3 text-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span class="text-gray-700">Administração de medicamentos: comprimidos, líquidos, colírios, pomadas, sprays, injeção subcutânea e limpeza de feridas</span>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="h-6 w-6 mr-3 text-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span class="text-gray-700">Brincadeiras e carinho</span>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="h-6 w-6 mr-3 text-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span class="text-gray-700">Somente companhia (se o pet for mais reservado)</span>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="h-6 w-6 mr-3 text-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span class="text-gray-700">Fotos e vídeos durante toda visita</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Serviços e Preços -->
+        <section id="servicos" class="py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        Meus Serviços de Cuidado Pet
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Serviços focados em visitas domiciliares para manter a rotina do seu pet durante sua ausência.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <!-- Cartão 1: Visita Pet Sitter -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-primary transition duration-300 hover:shadow-xl">
+                        <h3 class="text-2xl font-bold mb-3 text-primary">Visita Pet Sitter</h3>
+                        <p class="text-gray-500 mb-6">Cuidado no conforto e segurança do lar do seu pet durante sua viagem.</p>
+                        <ul class="space-y-3 text-gray-600 mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 mr-2 text-primary mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                Visitas de 30 a 60 minutos, conforme necessidade
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 mr-2 text-primary mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                Todos os cuidados incluídos (alimentação, higiene, medicação, etc.)
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 mr-2 text-primary mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                Fotos e vídeos durante toda visita
+                            </li>
+                        </ul>
+                        <div class="pt-4 border-t border-gray-200">
+                            <p class="text-primary font-bold text-lg">💜 Valor personalizado por bairro</p>
+                            <p class="text-sm text-gray-500 mt-1">Consulte valores no agendamento</p>
+                        </div>
+                    </div>
+
+                    <!-- Cartão 2: Pacotes com Desconto -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-primary transition duration-300 hover:shadow-xl">
+                        <h3 class="text-2xl font-bold mb-3 text-primary">Pacotes com Desconto</h3>
+                        <p class="text-gray-500 mb-6">Economia para quem precisa de múltiplas visitas.</p>
+                        <ul class="space-y-3 text-gray-600 mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 mr-2 text-primary mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span><strong>5% de desconto</strong> a cada 7 visitas ou mais</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 mr-2 text-primary mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                Desconto não acumulativo
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 mr-2 text-primary mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                Ideal para viagens prolongadas
+                            </li>
+                        </ul>
+                        <div class="pt-4 border-t border-gray-200">
+                            <p class="text-primary font-bold text-lg">💰 Solicite orçamento personalizado</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Informações Adicionais -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <!-- Pagamento -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-primary">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                            <span class="text-2xl mr-2">💳</span>
+                            Formas de Pagamento
+                        </h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 mr-2 text-primary mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                PIX ou Transferência Bancária
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 mr-2 text-primary mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span><strong>50% do valor total</strong> antecipadamente</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 mr-2 text-primary mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                Restante após os serviços prestados
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Segunda Visita no Mesmo Dia -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-primary">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                            <span class="text-2xl mr-2">🔄</span>
+                            Segunda Visita no Mesmo Dia
+                        </h4>
+                        <div class="space-y-3 text-gray-700">
+                            <div>
+                                <p class="font-semibold mb-1">Opção 1: Visita Reduzida (50% do valor)</p>
+                                <p class="text-sm">Para atividades rápidas: repor comida/água, limpar caixas, trocar tapetinhos.</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold mb-1">Opção 2: Visita Normal (valor integral)</p>
+                                <p class="text-sm">Duração completa (50-60 min) com todas as tarefas inclusas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aviso Importante -->
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-xl">
+                    <div class="flex items-start">
+                        <div class="text-2xl mr-3">⚠️</div>
+                        <div>
+                            <h4 class="font-bold text-yellow-800 mb-2">Aviso Importante sobre Autorização de Entrada</h4>
+                            <p class="text-yellow-700 text-sm leading-relaxed">
+                                Em caso de chegada ao condomínio e a entrada não estiver autorizada, o tempo de espera será de <strong>15 minutos</strong> para contato. Este tempo será descontado na visita. Não sendo possível, a visita será cancelada e será ressarcido apenas <strong>metade do valor pago pela visita</strong>. Caso o cliente solicite retorno (se houver disponibilidade de horário) e a metade do valor não tenha sido ainda ressarcido, será cobrado mais <strong>50% do valor da visita</strong>. Caso tenha sido feito ressarcimento, o valor pago será integral.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Galeria de Fotos (Portfólio) - Mockup com Placeholders -->
+        <section id="galeria" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        Meus Amigos Mais Fofos
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Momentos de carinho e diversão que comprovam a qualidade do meu trabalho.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 rounded-lg">
+                    <!-- Placeholder 1: Cão no passeio -->
+                    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <img class="w-full h-48 object-cover object-center" src="./assets/imagens/carousel-1.jpg" alt="Cachorro feliz durante o passeio">
+                    </div>
+                    <!-- Placeholder 2: Gato em casa -->
+                    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <img class="w-full h-48 object-cover object-center" src="./assets/imagens/carousel-2.jpg" alt="Gato sendo mimado no sofá">
+                    </div>
+                    <!-- Placeholder 3: Hora da refeição -->
+                    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <img class="w-full h-48 object-cover object-center" src="./assets/imagens/carousel-3.jpg" alt="Pet Sitter alimentando o animal">
+                    </div>
+                    <!-- Placeholder 4: Relatório diário (Close-up) -->
+                    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <img class="w-full h-48 object-cover object-center" src="./assets/imagens/carousel-4.jpg" alt="Abraço carinhoso entre pet e sitter">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Depoimentos e Avaliações -->
+        <section id="depoimentos" class="py-24 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        O que Dizem Meus Clientes
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-600">
+                        A confiança dos tutores é a minha maior recompensa.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Depoimento 1 -->
+                    <div class="bg-white p-6 rounded-xl testimonial-card">
+                        <p class="text-gray-700 italic mb-4">"Tenho uma cachorra adulta de 8 anos que é reativa e não gosta de visitas. 
+                            Desde quando conheceu Gaia agiu com cordialidade e atualmente ama os cuidados! 
+                            Gaia é atenciosa, cuidadosa, e gosta tanto dos bichinhos que até os mais brabos reconhecem e gostam de volta! 
+                            Recomendo para todos os tutores que buscam um cuidado real com seus pets!"</p>
+                        <div class="flex items-center">
+                            <div class="text-2xl mr-3">🐶</div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Caroline Silva</p>
+                                <p class="text-sm text-gray-500">Serviço: Visita Pet Sitter</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Depoimento 2 -->
+                    <div class="bg-white p-6 rounded-xl testimonial-card">
+                        <p class="text-gray-700 italic mb-4">"Achei o serviço excelente! Foi a primeira vez que deixei minha gata com uma pet sitter e, confesso, estava bastante apreensiva. 
+                            No entanto, me senti extremamente tranquila e segura durante todo o período. Recebi constantemente vídeos e fotos, além de atualizações que me deixaram muito confortável. 
+                            A Gaia foi muito atenciosa, carinhosa e prestativa. Com certeza, recomendo e voltarei a contratar o serviço."</p>
+                        <div class="flex items-center">
+                            <div class="text-2xl mr-3">🐈</div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Maiara Winter</p>
+                                <p class="text-sm text-gray-500">Serviço: Visita Pet Sitter</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Depoimento 3 -->
+                    <div class="bg-white p-6 rounded-xl testimonial-card">
+                        <p class="text-gray-700 italic mb-4">"Gaia é um amor de pessoa e super profissional! 
+                            Cuidou super bem dos meus três gatinhos para que eu pudesse fazer uma viagem longa e me manteve diariamente informada sobre como eles estavam. 
+                            Amamos, vamos contrata-la novamente todas as vezes que precisarmos!"</p>
+                        <div class="flex items-center">
+                            <div class="text-2xl mr-3">🐈</div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Nathára Gonzaga</p>
+                                <p class="text-sm text-gray-500">Serviço: Visita Pet Sitter</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 6. Sistema de Agendamento por WhatsApp (Formulário) -->
+        <section id="agendamento" class="py-24 bg-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <div class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-4">
+                        Agendamento Rápido
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Preencha o formulário e inicie a conversa no WhatsApp para confirmar a disponibilidade.
+                    </p>
+                </div>
+                
+                <div class="p-8 bg-gray-50 rounded-xl shadow-2xl">
+                    <form id="schedule-form" class="space-y-5">
+                        
+                        <!-- 1. Nome do Tutor -->
+                        <div>
+                            <label for="tutorName" class="block text-sm font-medium text-gray-700">Seu Nome Completo</label>
+                            <input type="text" id="tutorName" name="tutorName" required
+                                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm">
+                        </div>
+
+                        <!-- 2. Detalhes do Pet -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="petType" class="block text-sm font-medium text-gray-700">Tipo de Pet</label>
+                                <select id="petType" name="petType" required
+                                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm bg-white">
+                                    <option value="">Selecione</option>
+                                    <option value="Cachorro">Cachorro</option>
+                                    <option value="Gato">Gato</option>
+                                    <option value="Gato e Cachorro">Gato e Cachorro</option>
+                                    <option value="Outro">Outro</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="petCount" class="block text-sm font-medium text-gray-700">Quantidade de Pets</label>
+                                <input type="number" id="petCount" name="petCount" min="1" value="1" required
+                                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm">
+                            </div>
+                        </div>
+
+                        <!-- 3. Serviço Desejado (Atualizado) -->
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-700">Serviço Desejado</label>
+                            <select id="service" name="service" required
+                                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm bg-white">
+                                <option value="">Selecione o Serviço</option>
+                                <option value="Visita Avulsa (30 min)">Visita Avulsa (30 min)</option>
+                                <option value="Visita Avulsa (60 min)">Visita Avulsa (60 min)</option>
+                                <option value="Pacote de Visitas (7 ou mais)">Pacote de Visitas (7 ou mais - com desconto)</option>
+                                <option value="Segunda Visita no Mesmo Dia (Reduzida)">Segunda Visita no Mesmo Dia (Reduzida - 50%)</option>
+                                <option value="Segunda Visita no Mesmo Dia (Normal)">Segunda Visita no Mesmo Dia (Normal - valor integral)</option>
+                            </select>
+                        </div>
+
+                        <!-- 4. Bairro ou Condomínio -->
+                        <div>
+                            <label for="neighborhood" class="block text-sm font-medium text-gray-700">Bairro ou Condomínio</label>
+                            <input type="text" id="neighborhood" name="neighborhood" required
+                                placeholder="Ex: Centro, Jardim América, Condomínio X..."
+                                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm">
+                        </div>
+
+                        <!-- 5. Data e Hora -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="date" class="block text-sm font-medium text-gray-700">Data Preferencial</label>
+                                <input type="date" id="date" name="date" required
+                                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm">
+                            </div>
+                            <div>
+                                <label for="time" class="block text-sm font-medium text-gray-700">Hora Preferencial</label>
+                                <input type="time" id="time" name="time" required
+                                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm">
+                            </div>
+                        </div>
+                        
+                        <!-- 6. Observações -->
+                        <div>
+                            <label for="notes" class="block text-sm font-medium text-gray-700">Observações (Medicamentos, Temperamento, Detalhes)</label>
+                            <textarea id="notes" name="notes" rows="3"
+                                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm"></textarea>
+                        </div>
+
+                        <!-- Botão de Agendamento -->
+                        <button type="submit"
+                                class="w-full flex items-center justify-center px-4 py-3 border border-transparent text-base font-bold rounded-lg shadow-lg text-white bg-primary hover:bg-primary-dark transition duration-150 ease-in-out">
+                            <i class="fab fa-whatsapp text-xl mr-3"></i>
+                            Agendar via WhatsApp
+                        </button>
+                        
+                        <!-- Mensagem de feedback (custom modal em vez de alert) -->
+                        <div id="message-box" class="hidden p-3 rounded-lg text-center font-medium text-sm"></div>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 7. Contato e Localização -->
+        <section id="contato" class="py-24 bg-gray-50">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-4">
+                    Fale Conosco
+                </h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    Estamos prontas para cuidar do seu pet na região de Feira de Santana.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
+                    <!-- Contato Principal (WhatsApp) -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary">
+                        <h3 class="font-bold text-xl mb-2 text-gray-800">WhatsApp</h3>
+                        <p class="text-primary font-semibold text-lg">(75) 99965-2757</p>
+                        <a href="#agendamento" class="text-sm text-gray-500 hover:text-primary transition duration-150">Agende diretamente pelo formulário</a>
+                    </div>
+                    <!-- Email -->
+                    <!-- <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary">
+                        <h3 class="font-bold text-xl mb-2 text-gray-800">E-mail</h3>
+                        <p class="text-gray-600 font-semibold text-lg">contato@petsittersite.com.br</p>
+                        <p class="text-sm text-gray-500">Para parcerias ou dúvidas longas</p>
+                    </div> -->
+                </div>
+
+                <div class="mt-8 pt-4 border-t border-gray-200">
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">Área de Atendimento</h3>
+                    <p class="text-gray-600">Atendo Feira de Santana e região. Os valores são personalizados conforme o bairro para garantir um serviço acessível e de qualidade.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <p>&copy; 2024 Gaia Pet Sitter. Todos os direitos reservados.</p>
+            <p class="mt-2 text-sm">Feira de Santana - BA</p>
+        </div>
+    </footer>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>
